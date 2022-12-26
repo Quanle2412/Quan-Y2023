@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="div1">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+    // Tạo thùng trống Element p 
+    const para= document.createElement('p');
+    // Tạo nội dung TextNode
+    const node= document.createTextNode('this is new TextNode')
+    // Lôi, kéo nội dung TextNode và thùng element p 
+    para.appendChild(node);
+    // Truy xuất tới phần tử có id=div1 
+    const element=document.getElementById('div1');
+    const child= document.getElementById('p1');
+    // Chèn nút p mới (para) trước con child (id=p1)
+    element.insertBefore(para,child)
+</script>
+</body>
+</html>
